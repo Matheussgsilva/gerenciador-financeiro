@@ -11,7 +11,7 @@ export const items: Item[] = [
         date: new Date(2021, 11, 15),
         category: 'food',
         title: 'Burger King',
-        value: 28
+        value: 28.90
     },
     {
         date: new Date(2021, 11, 17),

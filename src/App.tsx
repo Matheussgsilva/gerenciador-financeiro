@@ -8,6 +8,7 @@ import { items } from './data/items';
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
 
 import { TableArea } from './components/TableArea'
+import { InfoArea } from './components/InfoArea';
 
 function App() {
   const [list, setList] = useState(items);
@@ -25,7 +26,7 @@ function App() {
       </C.Header>
       <C.Body>
         
-        {/* Área de Informações */}
+        <InfoArea currentMonth={currentMonth} />
 
         {/* Área de Inserção */}
 

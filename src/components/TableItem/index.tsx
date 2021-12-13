@@ -8,6 +8,9 @@ type Props = {
 }
 
 export function TableItem({ item }: Props) {
+
+    let real = (item.value.toString()).replace('.',',')
+
     return(
         <C.TableLine>
             <C.TableColumn>{formatDate(item.date)}</C.TableColumn>
@@ -17,7 +20,11 @@ export function TableItem({ item }: Props) {
                 </C.Category>
             </C.TableColumn>
             <C.TableColumn>{item.title}</C.TableColumn>
-            <C.TableColumn>R$ {item.value}</C.TableColumn>
+            <C.TableColumn>
+                <C.Value color={categories[item.category].expense ? 'red' : 'green'}>
+                    R$ {real}
+                </C.Value>
+            </C.TableColumn>
         </C.TableLine>
     );
 }
