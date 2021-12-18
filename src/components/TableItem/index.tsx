@@ -9,7 +9,7 @@ type Props = {
 
 export function TableItem({ item }: Props) {
 
-    let real = (item.value.toString()).replace('.',',')
+    let convertedValue = (item.value.toString()).replace('.',',')
 
     return(
         <C.TableLine>
@@ -22,7 +22,7 @@ export function TableItem({ item }: Props) {
             <C.TableColumn>{item.title}</C.TableColumn>
             <C.TableColumn>
                 <C.Value color={categories[item.category].expense ? 'red' : 'green'}>
-                    R$ {real}
+                    R$ {convertedValue}
                 </C.Value>
             </C.TableColumn>
         </C.TableLine>
